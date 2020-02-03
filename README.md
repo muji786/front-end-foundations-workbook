@@ -57,22 +57,6 @@ This repo accompanies [Week 2 of the DWD class](https://github.com/itp-dwd/2020-
   }
   ```
 
-### [03_css-box-model-2.html](./workbook/03_css-box-model-2.html)
-**Challenge**: 
-+ Using a class called "debug", add a border around each element 
-  that is: 1px wide, solid, and black.
-  ```
-  .debug{
-    border: 1px solid black;
-  }
-  ```
-+ Give every element a top and bottom padding of 1rem each and horizontal padding by 0.5rem
-  by targeting each class name, e.g.:
-  ```
-  .nav{
-    padding: 1rem 0.5rem 1rem 0.5rem:
-  }
-  ```
 
 ### [04_css-box-model-3.html](./workbook/04_css-box-model-3.html)
 
