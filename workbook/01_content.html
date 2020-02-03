@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Front End Workbook</title>
+    
+    <!-- CSS: Styles get defined here -->
+    <style>
+      /* Best practices for default behaviors */
+      *, *::after, *::before {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+      }
+      /* Set your base font size in HTML to 16px - all your REM values will
+      be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
+      html{
+        font-size: 16px;
+      }
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* All of YOUR CSS styles will be defined here */
+      
+
+    </style>
+    
+  </head>
+
+  <body>
+    <!-- HTML: All your HTML Goes here -->
+    <!-- 
+      Challenge: 
+      + In your nav:
+        - add an unordered list that contains 3 list items of anchor tags. 
+          your ul tag should be classed "nav__list". And each :
+          1. <a href="/" target="_blank" noreferrer>Home</a>
+          2. <a href="/about" target="_blank" noreferrer>About</a>
+          3. <a href="/contact" target="_blank" noreferrer>Contact</a>
+      + In your header:
+        - add an h1 tag that includes the text: "I love you". Your h1 tag should have the class "header__title"
+      + In your main tag:
+        - add 3 tags with the following class names AND add some text inside:
+          1. <menu class="menu">my menu</menu>
+          2. <section class="content">my content</section>
+          3. <aside class="aside">my aside</aside>
+      + In your footer:
+        - add 2 section tags with a paragraph tag in each with a simple sentence
+          your paragraph tags should be classed "footer__content":
+          1. <section class="footer__section"> <p class="footer__content">I love dinosaurs</p> </section>
+          2. <section class="footer__section"> <p class="footer__content">I love nature</p> </section>
+    -->
+    <div id="app">
+      <nav class="nav"></nav>
+      <header class="header"></header>
+      <main class="main"></main>
+      <footer class="footer"></footer>
+    </div>
+  
+    <!-- JavasScript: Behaviors get defined here -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        // All your JS code goes here
+
+      });
+    </script>
+  </body>
+</html>

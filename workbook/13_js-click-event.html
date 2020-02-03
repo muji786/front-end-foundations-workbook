@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Front End Workbook</title>
+    
+    <!-- CSS: Styles get defined here -->
+    <style>
+      /* Best practices for default behaviors */
+      *, *::after, *::before {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+      }
+      /* Set your base font size in HTML to 16px - all your REM values will
+      be set relative to this value. See: http://tachyons.io/docs/typography/scale/ */
+      html{
+        font-size: 16px;
+      }
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* All of YOUR CSS styles will be defined here */
+      #app{
+        
+      }
+
+      .nav{
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        background-color:navy;
+      }
+      .nav__list{
+        display:flex;
+        justify-content: flex-end;
+        list-style: none;
+      }
+      .nav__item > a {
+        color: white;
+        text-decoration: none;
+      }
+      .nav__item:not(:last-child){
+        margin-right:1rem;
+      }
+
+      .header{
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        height: 80vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.fW44Ont_sw8tNlEeiIG0kAHaFj%26pid%3DApi&f=1);
+        background-position: center;
+        background-size:cover; 
+        background-repeat:no-repeat;
+      }
+
+      .main{
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        height: 50vh;
+        display:flex;
+      }
+
+      @media screen and (max-width:700px) {
+        .main {
+          flex-direction: column;
+          height:auto;
+        }
+      }
+
+      .footer{
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .footer__section{
+        width:40%;
+      }
+      .footer__content{
+        text-align:center;
+      }
+
+      .debug{
+        border: 1px solid black;
+      }
+
+      .menu{
+        background-color: tomato;
+        width:25%;
+        height:100%;
+      }
+      @media screen and (max-width:700px) {
+        .menu{
+          width:100%;
+        }
+      }
+
+      .content{
+        background-color: pink;
+        width:50%;
+        height:100%;
+      }
+      @media screen and (max-width:700px) {
+        .content{
+          width:100%;
+        }
+      }
+
+      .aside{
+        background-color: blueviolet;
+        width:25%;
+        height:100%;
+      }
+      @media screen and (max-width:700px) {
+        .aside{
+          width:100%;
+        }
+      }
+      
+
+      
+
+    </style>
+    
+  </head>
+
+  <body>
+    <!-- HTML: All your HTML Goes here -->
+    <!-- 
+      Challenge: 
+      + create a class called .bg-yellow and .bg-purple
+      + apply the .bg-yellow class to the .content element if the .content element.contains(".bg-purple") 
+       , if the opposite is true, then apply the .bg-yellow class
+        ```
+    -->
+    <div id="app">
+      <nav class="nav debug">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/" target="_blank" noreferrer>Home</a></li>
+          <li class="nav__item"><a href="/about" target="_blank" noreferrer>About</a></li>
+          <li class="nav__item"><a href="/contact" target="_blank" noreferrer>Contact</a></li>
+        </ul>
+      </nav>
+      <header class="header debug">
+        <h1 class="header__title">I Love You</h1>
+      </header>
+      <main class="main debug">
+        <menu class="menu">my menu</menu>
+        <section class="content">my content</section>
+        <aside class="aside">my aside</aside>
+      </main>
+      <footer class="footer debug">
+        <section class="footer__section"> <p class="footer__content">I love dinosaurs</p> </section>
+        <section class="footer__section"> <p class="footer__content">I love nature</p> </section>
+      </footer>
+    </div>
+  
+    <!-- JavasScript: Behaviors get defined here -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        // All your JS code goes here
+        const $contentSection = document.querySelector(".content");
+        const $asideSection = document.querySelector('.aside');
+
+        for(let i = 0; i < 10; i++){
+            // step 1: create an element
+            const $article = document.createElement("article");
+            $article.textContent = `Article #${i}`;
+            $contentSection.append($article);
+        }
+
+        $asideSection.addEventListener('click', function(){
+          $asideSection.style.backgroundColor = 'yellow';
+        });
+
+
+      });
+    </script>
+  </body>
+</html>
